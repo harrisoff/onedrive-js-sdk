@@ -1,6 +1,6 @@
 {
   "name": "@harrisoff/onedrive-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Core lib of OneDrive Image Hosting",
   "source": "src/index.ts",
   "main": "dist/index.js",

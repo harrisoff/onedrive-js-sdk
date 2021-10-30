@@ -11,6 +11,11 @@
   },
   "keywords": ["microsoft", "onedrive", "api", "image", "hosting"],
   "author": "harrisoff",
+  "homepage": "https://github.com/harrisoff/onedrive-api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harrisoff/onedrive-api"
+  },
   "license": "MIT",
   "dependencies": {
     "axios": "^0.23.0"

@@ -1,6 +1,8 @@
 # OneDrive API
 
-![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)
+[![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)](https://github.com/microsoft/TypeScript)
+[![npm version](https://badge.fury.io/js/@harrisoff%2Fonedrive-api.svg)](https://www.npmjs.com/package/@harrisoff/onedrive-api)
+![license](https://img.shields.io/npm/l/@harrisoff/onedrive-api)
 
 This is the core lib of [OneDrive Image Hosting](https://github.com/harrisoff/onedrive).
 

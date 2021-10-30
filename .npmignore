@@ -1,0 +1,12 @@
+.github
+.eslintignore
+.eslintrc.json
+
+.idea
+.vscode
+.DS_Store
+
+coverage
+test
+
+NOTES.md

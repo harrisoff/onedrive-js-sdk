@@ -1,0 +1,29 @@
+{
+  "name": "@harrisoff/onedrive-api",
+  "version": "1.0.0",
+  "description": "Core lib of OneDrive Image Hosting",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "keywords": ["microsoft", "onedrive", "api", "image", "hosting"],
+  "author": "harrisoff",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.23.0"
+  },
+  "peerDependencies": {
+    "axios": "^0.23.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "eslint": "^8.1.0",
+    "eslint-config-xo": "^0.39.0",
+    "microbundle": "^0.14.1",
+    "typescript": "^4.4.4"
+  }
+}

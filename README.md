@@ -56,6 +56,7 @@ const sharingLink = getShareUrl(shareId)
 - [ ] more details about setting up application
 - [ ] progress callback
 - [ ] test suite
+- [ ] standardize error code
 
 ## Development
 

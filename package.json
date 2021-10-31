@@ -10,11 +10,20 @@
     "require": "./dist/index.cjs",
     "default": "./dist/index.modern.js"
   },
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch"
   },
-  "keywords": ["microsoft", "onedrive", "api", "image", "hosting"],
+  "keywords": [
+    "microsoft",
+    "onedrive",
+    "api",
+    "image",
+    "hosting"
+  ],
   "author": "harrisoff",
   "homepage": "https://github.com/harrisoff/onedrive-api",
   "repository": {

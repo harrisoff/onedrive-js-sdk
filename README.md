@@ -8,11 +8,27 @@ This is the core lib of [OneDrive Image Hosting](https://github.com/harrisoff/on
 
 This project wraps a small part of OneDrive's APIs, only for uploading files and creating sharing links.
 
+[中文文档](./README.zh-cn.md)
+
+## Setting up Application
+
+In [App registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) page click *new registration* button, then you'll need to fill the following fields:
+
+- Name
+
+- Supported account types
+
+   `Personal Microsoft accounts only` is enough for personal usage
+
+- Redirect URI
+
+   For example, `https://localhost:3000/`
+
+After registration, click *Authentication* on the left, check `Access tokens (used for implicit flows)` and save.
+
+`Application (client) ID` is generated once the application is registered. But you'll need to verify the application before using it. Just click *Branding* on the left and follow the instructions.
+
 ## Usage
-
-### Setting up Application
-
-First, setting up your application [here](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade), `clientId` and `redirectUri` will be used later.
 
 ### Authentication
 
@@ -28,13 +44,13 @@ const authUrl = generateAuthUrl('your-client-id', 'your-redirect-uri')
 > This value is set to `openid https://graph.microsoft.com/Files.ReadWrite.All`
 > and is unnecessary to be changed.
 
-After redirecting back to your site, `access_token` will be presented in the url.
+After redirecting back to your site, `access_token` or error messages will be presented in the hash depending on whether authentication is successful.
 
 ### API calls
 
 There are two ways to call APIs.
 
-The original APIs are exported so you can use them directly:
+The original APIs are exposed so you can use them directly:
 
 ```ts
 import { uploadSmall, createUploadSession, uploadLargeChunk, share, getShareUrl } from '@harrisoff/onedrive-api'
@@ -53,7 +69,7 @@ const sharingLink = getShareUrl(shareId)
 
 ## TODO List
 
-- [ ] more details about setting up application
+- [x] more details about setting up application
 - [ ] progress callback
 - [ ] test suite
 - [ ] standardize error code

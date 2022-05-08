@@ -1,12 +1,12 @@
-# OneDrive API
+# OneDrive JS SDK
 
 [![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)](https://github.com/microsoft/TypeScript)
 [![npm version](https://badge.fury.io/js/@harrisoff%2Fonedrive-api.svg)](https://www.npmjs.com/package/@harrisoff/onedrive-api)
 ![license](https://img.shields.io/npm/l/@harrisoff/onedrive-api)
 
-[OneDrive 图床](https://github.com/harrisoff/onedrive)的核心库。
-
 本项目封装了 OneDrive 的一小部分 API，仅用于上传文件并生成分享链接。
+
+[OneDrive 图床](https://github.com/harrisoff/onedrive)的核心库。
 
 ## 创建应用
 

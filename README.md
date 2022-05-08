@@ -1,12 +1,12 @@
-# OneDrive API
+# OneDrive JS SDK
 
 [![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)](https://github.com/microsoft/TypeScript)
 [![npm version](https://badge.fury.io/js/@harrisoff%2Fonedrive-api.svg)](https://www.npmjs.com/package/@harrisoff/onedrive-api)
 ![license](https://img.shields.io/npm/l/@harrisoff/onedrive-api)
 
-This is the core lib of [OneDrive Image Hosting](https://github.com/harrisoff/onedrive).
-
 This project wraps a small part of OneDrive's APIs, only for uploading files and creating sharing links.
+
+This is the core lib of [OneDrive Image Hosting](https://github.com/harrisoff/onedrive).
 
 [中文文档](./README.zh-cn.md)
 

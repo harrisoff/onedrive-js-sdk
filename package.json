@@ -1,7 +1,7 @@
 {
-  "name": "@harrisoff/onedrive-api",
+  "name": "@harrisoff/onedrive-js-sdk",
   "version": "1.0.3",
-  "description": "Core lib of OneDrive Image Hosting",
+  "description": "Js SDK for OneDrive",
   "type": "module",
   "source": "./src/index.ts",
   "main": "./dist/index.cjs",
@@ -22,17 +22,17 @@
     "dev": "microbundle watch"
   },
   "keywords": [
-    "microsoft",
     "onedrive",
     "api",
+    "sdk",
     "image",
     "hosting"
   ],
   "author": "harrisoff",
-  "homepage": "https://github.com/harrisoff/onedrive-api",
+  "homepage": "https://github.com/harrisoff/onedrive-js-sdk",
   "repository": {
     "type": "git",
-    "url": "https://github.com/harrisoff/onedrive-api"
+    "url": "https://github.com/harrisoff/onedrive-js-sdk"
   },
   "license": "MIT",
   "dependencies": {

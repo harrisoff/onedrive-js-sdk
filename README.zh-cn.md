@@ -1,12 +1,12 @@
 # OneDrive JS SDK
 
 [![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)](https://github.com/microsoft/TypeScript)
-[![npm version](https://badge.fury.io/js/@harrisoff%2Fonedrive-api.svg)](https://www.npmjs.com/package/@harrisoff/onedrive-api)
-![license](https://img.shields.io/npm/l/@harrisoff/onedrive-api)
+[![npm version](https://badge.fury.io/js/@harrisoff%2Fonedrive-js-sdk.svg)](https://www.npmjs.com/package/@harrisoff/onedrive-js-sdk)
+![license](https://img.shields.io/npm/l/@harrisoff/onedrive-js-sdk)
 
 本项目封装了 OneDrive 的一小部分 API，仅用于上传文件并生成分享链接。
 
-[OneDrive 图床](https://github.com/harrisoff/onedrive)的核心库。
+可以用来搞个网页，比如 [OneDrive 图床](https://github.com/harrisoff/onedrive-image-hosting)。
 
 ## 创建应用
 
@@ -33,7 +33,7 @@
 这里使用[令牌流](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/getting-started/graph-oauth?view=odsp-graph-online#token-flow)验证。使用工具函数 `generateAuthUrl` 生成授权链接。
 
 ```ts
-import { generateAuthUrl } from '@harrisoff/onedrive-api'
+import { generateAuthUrl } from '@harrisoff/onedrive-js-sdk'
 
 const authUrl = generateAuthUrl('your-client-id', 'your-redirect-uri')
 ```
@@ -50,13 +50,13 @@ const authUrl = generateAuthUrl('your-client-id', 'your-redirect-uri')
 可以直接调用原始的 API：
 
 ```ts
-import { uploadSmall, createUploadSession, uploadLargeChunk, share, getShareUrl } from '@harrisoff/onedrive-api'
+import { uploadSmall, createUploadSession, uploadLargeChunk, share, getShareUrl } from '@harrisoff/onedrive-js-sdk'
 ```
 
 也可以使用封装了原始 API 的构造函数：
 
 ```ts
-import OneDriveAPI, { getShareUrl } from '@harrisoff/onedrive-api'
+import OneDriveAPI, { getShareUrl } from '@harrisoff/onedrive-js-sdk'
 
 const client = new OneDriveApi({ accessToken })
 const { id: fileId } = await client.upload(file, filePath)

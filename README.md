@@ -1,16 +1,16 @@
 # OneDrive JS SDK
 
 [![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)](https://github.com/microsoft/TypeScript)
-[![npm version](https://badge.fury.io/js/@harrisoff%2Fonedrive-api.svg)](https://www.npmjs.com/package/@harrisoff/onedrive-api)
-![license](https://img.shields.io/npm/l/@harrisoff/onedrive-api)
+[![npm version](https://badge.fury.io/js/@harrisoff%2Fonedrive-js-sdk.svg)](https://www.npmjs.com/package/@harrisoff/onedrive-js-sdk)
+![license](https://img.shields.io/npm/l/@harrisoff/onedrive-js-sdk)
 
 This project wraps a small part of OneDrive's APIs, only for uploading files and creating sharing links.
 
-This is the core lib of [OneDrive Image Hosting](https://github.com/harrisoff/onedrive).
+You can build a webGUI to use it. There is an example [OneDrive Image Hosting](https://github.com/harrisoff/onedrive-image-hosting).
 
 [中文文档](./README.zh-cn.md)
 
-## Setting up Application
+## Configure Account
 
 In [App registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) page click *new registration* button, then you'll need to fill the following fields:
 
@@ -35,7 +35,7 @@ After registration, click *Authentication* on the left, check `Access tokens (us
 Here we use [token flow](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/getting-started/graph-oauth?view=odsp-graph-online#token-flow) in authentication. Use helper function `generateAuthUrl` to generate an auth url and open it.
 
 ```ts
-import { generateAuthUrl } from '@harrisoff/onedrive-api'
+import { generateAuthUrl } from '@harrisoff/onedrive-js-sdk'
 
 const authUrl = generateAuthUrl('your-client-id', 'your-redirect-uri')
 ```
@@ -53,13 +53,13 @@ There are two ways to call APIs.
 The original APIs are exposed so you can use them directly:
 
 ```ts
-import { uploadSmall, createUploadSession, uploadLargeChunk, share, getShareUrl } from '@harrisoff/onedrive-api'
+import { uploadSmall, createUploadSession, uploadLargeChunk, share, getShareUrl } from '@harrisoff/onedrive-js-sdk'
 ```
 
 Or you can use constructor to create a client instance, which wraps the original APIs:
 
 ```ts
-import OneDriveAPI, { getShareUrl } from '@harrisoff/onedrive-api'
+import OneDriveAPI, { getShareUrl } from '@harrisoff/onedrive-js-sdk'
 
 const client = new OneDriveApi({ accessToken })
 const { id: fileId } = await client.upload(file, filePath)
@@ -69,9 +69,7 @@ const sharingLink = getShareUrl(shareId)
 
 ## TODO List
 
-- [x] more details about setting up application
 - [ ] progress callback
-- [ ] test suite
 - [ ] standardize error code
 
 ## Development

@@ -70,7 +70,6 @@ const sharingLink = getShareUrl(shareId)
 ## TODO List
 
 - [ ] progress callback
-- [ ] standardize error code
 
 ## Development
 

@@ -1,6 +1,6 @@
 {
   "name": "@harrisoff/onedrive-js-sdk",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Js SDK for OneDrive",
   "type": "module",
   "source": "./src/index.ts",

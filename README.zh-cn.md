@@ -50,18 +50,18 @@ const authUrl = generateAuthUrl('your-client-id', 'your-redirect-uri')
 可以直接调用原始的 API：
 
 ```ts
-import { uploadSmall, createUploadSession, uploadLargeChunk, share, getShareUrl } from '@harrisoff/onedrive-js-sdk'
+import { uploadSmall, createUploadSession, uploadLargeChunk, share, getShareItem } from '@harrisoff/onedrive-js-sdk'
 ```
 
 也可以使用封装了原始 API 的构造函数：
 
 ```ts
-import OneDriveAPI, { getShareUrl } from '@harrisoff/onedrive-js-sdk'
+import OneDriveAPI from '@harrisoff/onedrive-js-sdk'
 
 const client = new OneDriveApi({ accessToken })
 const { id: fileId } = await client.upload(file, filePath)
 const { shareId } = await client.share(fileId)
-const sharingLink = getShareUrl(shareId)
+const shareUrl = await client.getShareUrl(shareId)
 ```
 
 ## 开发文档

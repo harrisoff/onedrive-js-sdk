@@ -53,18 +53,18 @@ There are two ways to call APIs.
 The original APIs are exposed so you can use them directly:
 
 ```ts
-import { uploadSmall, createUploadSession, uploadLargeChunk, share, getShareUrl } from '@harrisoff/onedrive-js-sdk'
+import { uploadSmall, createUploadSession, uploadLargeChunk, share, getShareItem } from '@harrisoff/onedrive-js-sdk'
 ```
 
 Or you can use constructor to create a client instance, which wraps the original APIs:
 
 ```ts
-import OneDriveAPI, { getShareUrl } from '@harrisoff/onedrive-js-sdk'
+import OneDriveAPI from '@harrisoff/onedrive-js-sdk'
 
 const client = new OneDriveApi({ accessToken })
 const { id: fileId } = await client.upload(file, filePath)
 const { shareId } = await client.share(fileId)
-const sharingLink = getShareUrl(shareId)
+const shareUrl = await client.getShareUrl(shareId)
 ```
 
 ## TODO List

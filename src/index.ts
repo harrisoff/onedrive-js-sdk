@@ -1,4 +1,4 @@
-import {uploadLargeFileChunk, uploadSmallFile, createUploadSession, share} from './api';
+import {uploadLargeFileChunk, uploadSmallFile, createUploadSession, share, getShareItem} from './api';
 import {splitFileIntoChunks, parallel} from './utils';
 import {SMALL_SIZE, LARGE_SIZE, CHUNK_SIZE} from './constants';
 
@@ -108,5 +108,9 @@ export default class OneDriveApi {
 
 	public share(fileId: string) {
 		return share(fileId, this.accessToken);
+	}
+
+	public async getShareUrl(shareId: string) {
+		return (await getShareItem(shareId, this.accessToken))['@microsoft.graph.downloadUrl']
 	}
 }

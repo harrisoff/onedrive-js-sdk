@@ -69,3 +69,20 @@ export function share(fileId: string, token: string) {
 		},
 	);
 }
+
+/**
+ * Get the url of a shared file by its shareId
+ * @param shareId
+ * @returns
+ */
+export function getShareItem(shareId: string, token: string) {
+	return request.get<unknown, { "@microsoft.graph.downloadUrl": string }>(
+		`https://graph.microsoft.com/v1.0/shares/${shareId}/driveItem`,
+		{
+			headers: {
+				Authorization: `Bearer ${token}`,
+				'Content-Type': 'application/json',
+			},
+		},
+	);
+}

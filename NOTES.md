@@ -24,7 +24,7 @@ https://harrisoff.github.io/onedrive.html
 2. 在授权页登录，跳转并提取 `access_token`
 3. 上传文件到 OneDrive，返回文件 `id`
 4. 通过文件 `id` 请求 `ShareId`
-5. 拼接 URL 得到可嵌入 img 标签的图片链接
+5. ~~拼接 URL 得到可嵌入 img 标签的图片链接~~（已废弃）
 
 ### 其他
 
@@ -163,6 +163,8 @@ reader.onloadend = function (e) {
 
 请求成功后，返回值中会有一个 `webUrl`，但是打开后发现，文件是显示在 OneDrive 页面里的。
 所以如果文件是图片，这个接口的返回值是不能直接拿来作为页面里 img 标签的 `src` 属性的。
+
+**2024-11 更新：看来下面这种方式已经被微软禁用。改成了使用 API，见代码**
 
 [https://github.com/OneDrive/onedrive-api-docs/issues/622](https://github.com/OneDrive/onedrive-api-docs/issues/622) 提供了一个方法。
 
